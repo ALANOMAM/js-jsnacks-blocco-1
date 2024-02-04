@@ -8,12 +8,17 @@ let somma = document.querySelector("#addition")
 let numbers =[];
 let sum =0;
 
+
 for(let i=0 ; i<10 ; i++){
  let number= Number(prompt("inserisci un numero"))
-  numbers.push(number) 
+ if( !isNaN(number)){
+ numbers.push(number) 
   sum = sum+numbers[i]
 }
-
+else{
+  prompt("the value inserted is not admited")
+}
+}
 somma.innerHTML = sum
 
 
