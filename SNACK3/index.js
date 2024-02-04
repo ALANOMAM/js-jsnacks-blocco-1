@@ -10,8 +10,12 @@ let numbers = []
 
 for(let i =0; i<6 ;i++){
  let number= prompt("inserisci il numero")
+ if(!isNaN(number)){
  if(!(number % 2 == 0)){
  numbers.push(number)}
+ }else{
+    numbers.push(NaN)
+ }
 }
 
 oddNumbers.innerHTML=numbers
